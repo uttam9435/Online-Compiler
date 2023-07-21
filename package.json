@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "emmet": "^2.4.5",
+    "highlight.js": "^11.8.0",
+    "mongoose": "^7.3.4",
+    "react-highlight.js": "^1.0.7"
+  }
+}
