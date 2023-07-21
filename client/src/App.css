@@ -1,6 +1,6 @@
 
 .App{
-  background-color: bisque;
+  background-color:papayawhip;
 }
 .App-logo {
   height: 40vmin;
@@ -25,7 +25,8 @@
 }
 .tagline{
   text-align: center;
-  color:crimson;
+  color:darkred;
+  font-family:Georgia, 'Times New Roman', Times, serif;
 
 }
 .App-link {
@@ -40,11 +41,33 @@
     transform: rotate(360deg);
   }
 }
-.setDefault{
-    position : relative;
-    margin-left: 50px;
+
+
+/* CSS */
+.button-33 {
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 4px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-left: 40px;
 }
 
+.button-33:hover {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
 
 /* CSS */
 .button-85 {
@@ -116,15 +139,24 @@
 }
 
 .textBox{
-  background-color: #1f1f1f;
-  color :#fff
+  background-color:#10192c;
+  color :tan;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size:medium;
 }
 .code-status{
      position:absolute;
      /* padding-left: 800px; */
-     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     font-size: medium;
+     font-weight: bold;
 }
 .grid-container {
     display:flex;
     column-gap: 50px;
+  }
+  .lang-label{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 10px;
+    font-weight:bold;
   }

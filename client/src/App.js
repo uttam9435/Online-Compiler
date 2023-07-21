@@ -102,7 +102,7 @@ function App() {
     <div className="App">
       <h1 className="tagline">Online Code Compiler</h1>
       <div>
-        <label> Choose Language:</label>
+        <label className="lang-label"> Choose Language:</label>
         <select
           value={language}
           onChange={(e) => {
@@ -117,7 +117,7 @@ function App() {
           <option value="cpp">C++</option>
           <option value="py">Python</option>
         </select>
-        <span className="setDefault"><button onClick={setDefaultLanguage}>Set Default</button></span>
+        <button className="button-33" onClick={setDefaultLanguage}>Set Default</button>
 
       </div >
 
@@ -126,7 +126,7 @@ function App() {
       <div className="grid-container">
         <div><textarea
           className="textBox"
-          rows="27"
+          rows="23"
           cols="100"
           value={code}
           onChange={(e) => {
