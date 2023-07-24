@@ -7,11 +7,7 @@ const { addJobToQueue } = require('./jobQueue');
 const Job = require('./models/job');
 
 mongoose.connect(
-  'mongodb://127.0.0.1:27017/compilerdb', // Replace with your database name
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  }
+  'mongodb+srv://uttam9435:Uttam123@cluster0.1nt4lav.mongodb.net/test'
 ).then(() => {
   console.log('Successfully connected to MongoDB database!');
 }).catch((err) => {
@@ -58,16 +54,17 @@ app.post("/run", async (req, res) => {
   try {
     // need to generate a c++ file with content from the request
     const filepath = await generateFile(language, code);
-
+    // console.log(language, filepath);
     newJob = await new Job({ language, filepath }).save();
+    // newJob = await Job.insertOne({language: language, filepath: filepath});
     const jobId = newJob["_id"];
     addJobToQueue(jobId);
-    console.log(newJob);
+    // console.log(newJob);
 
     res.status(201).json({success: true, jobId});
 
     // we need to run the file and send the response
-    let output;
+    
 
   }catch(err){
     return res.status(500).json({success: false, err: JSON.stringify(err)});
