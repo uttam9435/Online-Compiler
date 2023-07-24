@@ -33,7 +33,7 @@ function App() {
       setStatus(null);
       setJobId(null);
       setJobDetails(null);
-      const { data } = await axios.post("http://localhost:5000/run", payload);
+      const { data } = await axios.post(process.env.REACT_APP_BASE_URL+"/run", payload);
       if (data.jobId) {
         setJobId(data.jobId);
         setStatus("Submitted.");
@@ -41,7 +41,7 @@ function App() {
         // poll here
         pollInterval = setInterval(async () => {
           const { data: statusRes } = await axios.get(
-            `http://localhost:5000/status`,
+            process.env.REACT_APP_BASE_URL+"/status",
             {
               params: {
                 id: data.jobId,

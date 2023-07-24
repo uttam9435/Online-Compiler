@@ -23,7 +23,7 @@ app.use(express.json());
 
 app.get("/status", async (req, res) => {
   const jobId = req.query.id;
-  console.log("status requested", jobId);
+  // console.log("status requested", jobId);
   if (jobId == undefined) {
     return res.status(400).json({ success: false, error: "missing id query param" });
   }
@@ -43,7 +43,7 @@ app.get("/status", async (req, res) => {
 
 app.post("/run", async (req, res) => {
   const { language = "cpp", code } = req.body;
-  console.log(language, code.length);
+  // console.log(language, code.length);
 
   if (code === undefined) {
     return res.status(400).json({ success: false, error: "Empty code body!" });
